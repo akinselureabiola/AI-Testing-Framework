@@ -1,5 +1,8 @@
 pytest
-selenium
 pytest-html
+black
+flake8
+isort
+pre-commit
 requests
-python-dotenv
+selenium
