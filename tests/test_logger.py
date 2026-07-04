@@ -12,7 +12,7 @@ def test_get_logger_returns_logger_instance():
     Verify that get_logger() returns a Logger object.
     """
 
-    logger = get_logger("Ai_resume")
+    logger = get_logger("test_logger")
 
     assert isinstance(logger, logging.Logger)
-    assert logger.name == "Ai_resume"
+    assert logger.name == "test_logger"

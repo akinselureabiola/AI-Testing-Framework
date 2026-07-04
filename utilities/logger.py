@@ -8,6 +8,7 @@ application built on top of the framework.
 import logging
 
 from config.settings import LOG_LEVEL, LOGS_DIR
+from utilities.file_manager import create_directory
 
 
 def get_logger(name: str) -> logging.Logger:
@@ -35,7 +36,7 @@ def get_logger(name: str) -> logging.Logger:
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(formatter)
 
-    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    create_directory(LOGS_DIR)
 
     file_handler = logging.FileHandler(
         LOGS_DIR / "framework.log",
